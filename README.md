@@ -1,3 +1,4 @@
+
 # Todo-list-React
 
 Directorys 
@@ -64,6 +65,3 @@ if (rootElement) {
 } else {
   console.error("Elemento root não encontrado.");
 }
-
-```
-
