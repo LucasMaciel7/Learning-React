@@ -36,7 +36,7 @@ mysite/
 # 🚀 Componentes
 Dentro do React exibimos o nosso frontend através de componentes, são apenas funções JavaScript que retornam um HTML.
 O Fluxo de trabalho se baseia em criar um componente em um arquivo TSX.
-### /src/components/tweet.tsx
+### `/src/components/tweet.tsx`
 ```tsx
 export function Tweet(){
     return(
