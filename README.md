@@ -31,6 +31,11 @@ mysite/
 ├── README.md 
 └── tsconfig.json # Configurações do TypeScript
 
+
+```
+# 🚀 Componentes
+Dentro do React exibimos o nosso frontend através de componentes, são apenas funções JavaScript que retornam um HTML.
+O Fluxo de trabalho se baseia em criar um componente em um arquivo TSX.
 ### /src/components/tweet.tsx
 ```tsx
 export function Tweet(){
@@ -39,10 +44,6 @@ export function Tweet(){
     )
 }
 ```
-# 🚀 Componentes
-Dentro do React exibimos o nosso frontend através de componentes, são apenas funções JavaScript que retornam um HTML.
-O Fluxo de trabalho se baseia em criar um componente em um arquivo TSX.
-
 Após criarmos nosso componente Tweet, nós o chamamos dentro do nosso componente principal (`App`) em `src/App.tsx`
 
 ### `/src/App.tsx`
