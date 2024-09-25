@@ -1,26 +1,20 @@
+# 🚀 Princípios React
+Este repositório tem como objetivo 📘 **aprendizagem da biblioteca React** de JavaScript, e já vamos iniciar os estudos com a linguagem **TypeScript**, que adiciona suporte a tipagens ao JavaScript.
 
-# Todo-list-React
-
-Directorys 
+## 📁 Estrutura de Diretórios:
 ```bash
 mysite/
-├── node_modules/ # Dependencies
-├── public/  # Static files 
+├── node_modules/ # 📦 Dependências
+├── public/  # 🗂️ Arquivos estáticos
 │   └── index.html
-├── src/ # Source code 
-│   ├── App.tsx # Main component
-│   └── index.tsx # Renders app.tsx
+├── src/ # 🧑‍💻 Código-fonte
+│   ├── App.tsx # Componente principal
+│   └── index.tsx # Renderiza App.tsx
 ├── .gitignore
-├── package-lock.json #Arquivo de controle de dependencias
-├── package.json # Package Manager
+├── package-lock.json # Gerenciamento de dependências
+├── package.json # Gerenciador de pacotes
 ├── README.md 
-└── tsconfig.json # Arquivo de configuração do typescript
-
-```
-
-# 1. Componentes
-Dentro do React exibimos o nosso frontend através de componentes, são apenas funções JavaScript que retornam um HTML.
-O Fluxo de trabalho se baseia em criar um componente em um arquivo TSX.
+└── tsconfig.json # Configurações do TypeScript
 
 ### /src/components/tweet.tsx
 ```tsx
@@ -30,6 +24,9 @@ export function Tweet(){
     )
 }
 ```
+# 🚀 Componentes
+Dentro do React exibimos o nosso frontend através de componentes, são apenas funções JavaScript que retornam um HTML.
+O Fluxo de trabalho se baseia em criar um componente em um arquivo TSX.
 
 Após criarmos nosso componente Tweet, nós o chamamos dentro do nosso componente principal (`App`) em `src/App.tsx`
 
@@ -68,9 +65,9 @@ if (rootElement) {
 }
 
 ```
-# 2. Propiededades
-Dentro do React conseguimos acessar ou passar propiedades para aquele  componente diretamente dentro da tag HTML passando `{}`
-## Example
+# 🔧 Propriedades: são argumentos que passamos aos componentes
+Dentro do React conseguimos acessar ou passar Propriedades para aquele  componente diretamente dentro da tag HTML passando `{}`
+## Explicação
 Ao utilizar TypeScript no React, definimos os tipos de propriedades que o componente pode receber. Isso garante maior segurança no código, facilitando o desenvolvimento com tipagens corretas
 ### `src/components/tweet.tsx`
 ```tsx
@@ -105,7 +102,7 @@ export default function App(){
 ## Output
 ![image](https://github.com/user-attachments/assets/8a7debf8-88e4-49bf-a2d4-a8b6e6d52832)
 
-# 3. State
+# 📊 Estado: Controla o comportamento e a renderização de componentes
 O Estado ou `state`de um componente define como ele deve se comportar e renderizar um determinado momento e quando o estado muda o React acaba renderizando o componente para refletir a nova condição.
 ## Example
 ```tsx
@@ -180,6 +177,112 @@ Este bloco ele esta retornando o estado atual do componente, fazendo um for dent
 ```
 
 Altera o estado a cada click chamando a função que criamos.
+
+
+# 🎨 Estilização: Use CSS ou frameworks como TailwindCSS para customizar a aparência.
+Dentro do Raeact podemos seguir o mesmo padrão de estilização convencional que ja conhecemos, como por exemplo o prório css
+Somente criar um arquivo `.css`dentro de Src e importalo para dentro do seu app
+### `src/app.css/`
+```css
+body{
+    background-color: black;
+}
+```
+Depois somente importalo dentro do seu app que irá renderizar a estilização
+### `src/App.tsx`
+
+```ts
+import './app.css';
+```
+
+### Bibliotecas java Script de estilos
+Com o uso frequente do java Script criou-se a necessidade de de poder estilizar componentes e paginas diretamento no arquivo `jsx` que o proprio React já disponibiliza.
+```jsx
+   <button 
+      onClick={createTweet}
+      style={{
+        backgroundColor: 'blue',
+        padding:'6px 10px',
+        border: 0,
+      }}>
+      Adicionar Tweet
+    </button>
+```
+
+
+Passando entre duas chaves `{{}}` conseguimos passar Propriedades css para aquele objeto\
+Tirando isso o React tem suporte a outras bibliotecas de Estilização inline como tailwindcss ou bootstrap entre outros.\
+
+# 🔀 Roteamento: Crie rotas para diferentes páginas dentro da aplicação
+Roteamento dentro do React permite que nós tenhamos uma aplicação com varias paginas, para isso precisamos instalar primeiro sua dependencia.\
+- Documentação da biblioteca: [React Router](https://reactrouter.com/en/main)
+
+```zsh
+pnpm add react-router-dom
+```
+Se estiver ultilizando TypeScript é recomendavel que que instale os tipos da biblioteca
+```zsh
+pnpm add -D @types/react-router-dom
+```
+
+Para exemplificar a explicação do roteamento do react, vamos criar um arquivo
+
+### `src/pages/catalog.tsx`
+Vamos criar o componente catalogo neste arquivo 
+```tsx
+export function Catalog(){
+    return <h1>Catalog</h1>
+}
+```
+
+Logo após vamos criar um arquivo chamado `routes.tsx` seu caminho será:
+### `src/routes.tsx`
+```tsx
+import { Catalog } from "./pages/catalog"
+import{
+    BrowserRouter as Router,
+    Route,
+    Routes
+} from "react-router-dom"
+
+export function AppRoutes(){
+    return(
+        <Router>
+            <Routes>
+                <Route path="/catalog" element= {<Catalog />}></Route>
+            </Routes>
+        </Router>
+    )
+}
+```
+Primeiros importamos nosso componente `catalog` e logo após importamos as seguintes funções da biblioteca
+- `BrowserRouter as Router`: Verifica as mudanças na url
+- `Route`: Registra nossas rotas
+- `Routes`: Engloba todas as route
+
+`<Route path="/cart" element={<Cart />}></Route>` Aqui nós estamos passando qual será o caminho na URL com o `path` e depois mostramos qual componente queremos renderizar com o `Element`
+
+Depois de tudo devemos chamar nosso componente `AppRoutes` dentro de nosso `App.tsx`
+
+```tsx
+export default function App(){
+  return (
+    <AppRoutes />
+  )
+```
+
+E pronto, ao acessarmos: `http:localhost:3000/catalog`irá nos exibir nosso componente dentro de catalog.
+## Output
+
+```bash
+<h2>Catalogo<h2/>
+```
+
+Material de acompanhamento
+[![React Video Thumbnail](https://img.youtube.com/vi/pDbcC-xSat4/0.jpg)](https://www.youtube.com/watch?v=pDbcC-xSat4)
+
+
+    
 
 
 
