@@ -59,7 +59,7 @@ export default function App(){
   }
 ```
 
-Depois de registrar nosso componente Tweet dentro do nosso componente Main, vamos chamar nosso componente main dentro de /src/index.tsx que injeta nosso componente na div com id root em nosso arquivo html em 
+Depois de registrar nosso componente Tweet dentro do nosso componente Main, vamos chamar nosso componente main dentro de `/src/index.tsx` que injeta nosso componente na div com id **root** em nosso arquivo html em 
 ### `public/index.html`
 
 ```tsx
@@ -95,7 +95,7 @@ No mesmo arquivo, criar o componente passando como parametro a propriedade que c
 ```tsx
 export function Tweet(props: tweetProps){
     return(
-        <p>{props.text}</p>
+        <p>{props.text}</p> 
     )
 }
 ```
