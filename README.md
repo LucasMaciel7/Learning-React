@@ -1,6 +1,19 @@
 # 🚀 Princípios React
 Este repositório tem como objetivo 📘 **aprendizagem da biblioteca React** de JavaScript, e já vamos iniciar os estudos com a linguagem **TypeScript**, que adiciona suporte a tipagens ao JavaScript.
 
+---
+
+## 📜 **Autor**: Lucas Maciel
+🔗 **[![GitHub](https://img.shields.io/badge/-GitHub-181717?style=flat&logo=github&logoColor=white)](https://github.com/LucasMaciel7)**  \
+🔗 **[![LinkedIn](https://img.shields.io/badge/-LinkedIn-0A66C2?style=flat&logo=linkedin&logoColor=white)](https://linkedin.com/in/lucas-maciel7)**  \
+🔗 **[![Email](https://img.shields.io/badge/-Email-D14836?style=flat&logo=gmail&logoColor=white)](mailto:lucasmacielcampos27@gmail.com)** 
+
+---
+
+## 🛠 Criando o app
+```bash
+npx create-react-app nome-do-seu-app --template typescript
+```
 ## 📁 Estrutura de Diretórios:
 ```bash
 mysite/
@@ -278,8 +291,17 @@ E pronto, ao acessarmos: `http:localhost:3000/catalog`irá nos exibir nosso comp
 <h2>Catalogo<h2/>
 ```
 
-Material de acompanhamento
-[![React Video Thumbnail](https://img.youtube.com/vi/pDbcC-xSat4/0.jpg)](https://www.youtube.com/watch?v=pDbcC-xSat4)
+## 🎥 Material de acompanhamento
+
+<div style="text-align: center;">
+  <a href="https://www.youtube.com/watch?v=pDbcC-xSat4">
+    <img src="https://img.youtube.com/vi/pDbcC-xSat4/0.jpg" alt="Iniciando no React.js em 2022" />
+  </a>
+</div>
+
+Clique na imagem acima para assistir ao vídeo de acompanhamento no YouTube.
+
+
 
 
     
