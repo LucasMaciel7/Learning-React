@@ -6,7 +6,9 @@ Este repositório tem como objetivo 📘 **aprendizagem da biblioteca React** de
 ## 📜 **Autor**: Lucas Maciel
 🔗 **[![GitHub](https://img.shields.io/badge/-GitHub-181717?style=flat&logo=github&logoColor=white)](https://github.com/LucasMaciel7)**  \
 🔗 **[![LinkedIn](https://img.shields.io/badge/-LinkedIn-0A66C2?style=flat&logo=linkedin&logoColor=white)](https://linkedin.com/in/lucas-maciel7)**  \
-🔗 **[![Email](https://img.shields.io/badge/-Email-D14836?style=flat&logo=gmail&logoColor=white)](mailto:lucasmacielcampos27@gmail.com)** 
+🔗 **[![Email](https://img.shields.io/badge/-Email-D14836?style=flat&logo=gmail&logoColor=white)](mailto:lucasmacielcampos27@gmail.com)** \
+🔗 **[![99Freelas](https://img.shields.io/badge/-99Freelas-00CBB5?style=flat&logo=99freelas&logoColor=white)](https://www.99freelas.com.br/user/LucasMaciel.7)**
+
 
 ---
 
